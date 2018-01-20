@@ -2,62 +2,26 @@
 
 package Homework;
 
-import java.text.DateFormat;
-import java.util.Calendar;
-import java.text.SimpleDateFormat;
 import java.util.Scanner;
 
 public class Del1entry {	
 public static void main(String [] args) {
 	Scanner scnr = new Scanner(System.in);
 	
-	String firstDay;
-	String firstMonth;
-	String firstYear;
-	String secondDay;
-	String secondMonth;
-	String secondYear;
-	int day;
-	int month;
-	int year;
+	System.out.println("Enter two three digit Integers with a space to seperate them. Then hit enter:");
 	
-	System.out.println("Enter day of the month for first date: ");
-	firstDay = scnr.next();
+	String Int1 = scnr.next(); //Using string to scan for int
+	String Int2 = scnr.next(); //In order to check for characters
 	
-	System.out.println("Enter the month for first date: ");
-	firstMonth = scnr.next();
-	
-	System.out.println("Enter day the year for first date: ");
-	firstYear = scnr.next();
-	
-	System.out.println("Enter day of the month for second date: ");
-	secondDay = scnr.next();
-	
-	System.out.println("Enter the month for second date: ");
-	secondMonth = scnr.next();
-	
-	System.out.println("Enter day the year for second date: ");
-	secondYear = scnr.next();
-	
-	day = Integer.parseInt(firstDay) - Integer.parseInt(secondDay);
-	day = Math.abs(day);
-	
-	month = Integer.parseInt(firstMonth) - Integer.parseInt(secondMonth);
-	month = Math.abs(month);
-	
-	year = Integer.parseInt(firstYear) - Integer.parseInt(secondYear);
-	year = Math.abs(year);
-	
-	
-	
-	System.out.println("The difference between the first date and second date is: " + day + " days, " + month + " months, " + year + " years.");
-	
-	
-	
-	
-	
-	
-	
+	 //below finds if sum of the 1st, 2nd, and 3rd char, of 
+	 if ( (Int1.charAt(0) + Int2.charAt(0)) == (Int1.charAt(1) + Int2.charAt(1)) 
+			 && (Int1.charAt(1) + Int2.charAt(1)) == (Int1.charAt(2) + Int2.charAt(2))) {
+		 System.out.println("True");
+	 }
+	 else {
+		 System.out.println("False");
+	 }
 }
 
 }
+
